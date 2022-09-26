@@ -7,12 +7,16 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
   </head>
   <body>
-    <h1>Fill in your name and your friend's name to create your custom postcard!</h1>
+    <h1>Fill in your name, your friend's name, where you are vacationing, and what you are bringing back for your friend. We will then use this info to create your custom postcard!</h1>
     <form action="/postcard" method="post">
      <label for="sender">Sender's Name</label>
      <input id="sender" name="sender" type="text">
      <label for="recipient">Recipient's Name</label>
      <input id="recipient" name="recipient" type="text">
+     <label for="vacation">Vacation Spot</label>
+     <input id="vacation" name="vacation" type="text">
+     <label for="souvenir">Souvenir you are bringing back</label>
+     <input id="souvenir" name="souvenir" type="text">
      <button type="submit">Go!</button>
     </form>
   </body>

@@ -14,23 +14,25 @@ namespace FriendLetter.Controllers
 
 // Root Route
     [Route("/")]
-    public ActionResult Letter()
-    {
-      LetterVariable myLetterVariable = new LetterVariable();
-      myLetterVariable.Recipient = "Lina";
-      myLetterVariable.Sender = "Jasmine";
-      return View(myLetterVariable);
-    }
+    // public ActionResult Letter()
+    // {
+    //   LetterVariable myLetterVariable = new LetterVariable();
+    //   myLetterVariable.Recipient = "Lina";
+    //   myLetterVariable.Sender = "Jasmine";
+    //   return View(myLetterVariable);
+    // }
 
     [Route("/form")]
     public ActionResult Form() { return View();}
 
     [Route("/postcard")]
-    public ActionResult Postcard(string recipient, string sender)
+    public ActionResult Postcard(string recipient, string sender, string vacation, string souvenir)
     {
       LetterVariable myLetterVariable = new LetterVariable();
       myLetterVariable.Recipient = recipient;
       myLetterVariable.Sender = sender;
+      myLetterVariable.Vacation = vacation;
+      myLetterVariable.Souvenir = souvenir;
       return View(myLetterVariable);
     }
   }
